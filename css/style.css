@@ -1,0 +1,408 @@
+/* Start Variables */
+
+:root {
+    --main-color-blue: rgb(0, 183, 255);
+
+
+    --transition-action: 0.1s;
+    --scale-action: 105%
+}
+
+/* End Variables */
+
+/********************************************************************************************/
+
+/* Start Global Roles */
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0; 
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* @media (max-width: 767px) {  Mobily devices (tablets, 767px and up) 
+    .container {
+        width: 450px;
+    }
+ } */
+
+
+@media (min-width: 768px) { /* // Medium devices (tablets, 768px and up) */
+    .container {
+        width: 750px;
+    }
+ }
+
+
+@media (min-width: 992px) { /* // Large devices (desktops, 992px and up) */
+    .container {
+        width: 970px;
+    }
+ }
+
+
+@media (min-width: 1200px) { /* // X-Large devices (large desktops, 1200px and up) */
+    .container {
+        width: 1170px;
+    }
+ }
+
+
+/* End Global Roles */
+
+
+
+/********************************************************************************************/
+
+
+/*Start My Framework */
+
+.big-title-style {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--main-color-blue);
+    padding: 50px 0;
+}
+
+/*End My Framework */
+
+/********************************************************************************************/
+/********************************************************************************************/
+/********************************************************************************************/
+/********************************************************************************************/
+/********************************************************************************************/
+
+
+/* Start Header */
+
+header {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: solid 1px #999;
+    z-index: 100;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+
+}
+
+header .container> a,
+header .container nav a {
+    color: var(--main-color-blue);
+    text-decoration: none;
+}
+
+header .container> a {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+header nav a {
+    padding-right: 15px;
+}
+
+/* End Header */
+
+/* Start landing */
+
+section.landing {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    background-image: url(../images/abstract-blue-geometric-shapes-background_1035-17545.webp);
+    background-size: cover;
+    margin-top: 60px;
+}
+
+section.landing .container {
+    display: flex;
+    align-items: center;
+}
+section.landing .container> div:first-child {
+    width: 60%;
+}
+
+section.landing .container> div:last-child {
+    width: 40%;
+}
+
+section.landing .container .text {
+    line-height: 2;
+}
+
+section.landing .container .text h2 span {
+    font-size: 3rem;
+}
+
+section.landing .container .text> a{
+    color: white;
+    text-decoration: none;
+    background-color: var(--main-color-blue);
+    padding: 15px;
+    font-weight: bold;
+    display: block;
+    width: fit-content;
+    margin: 11px 0;
+    border-radius: 10px;
+    transition: var(--transition-action);
+}
+
+section.landing .container .text> a:hover {
+    transform: scale(var(--scale-action));
+}
+
+section.landing .container .text .icons a {
+    color: white;
+    font-size: 1.8rem;
+    margin-right: 20px;
+    transition: var(--transition-action);
+}
+
+
+
+section.landing .container .image img {
+    width: 100%;
+}
+
+@media (max-width: 767px) { /*  Mobily devices (tablets, 767px and up)  */
+    
+    section.landing .container .text {
+        line-height: 1.8;
+    }
+    
+    section.landing .container .text h2 {
+        font-weight: normal;
+    }
+    section.landing .container .text h2 span {
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    
+    section.landing .container .text .icons a {
+        margin-right: 5px;
+    }
+
+}
+
+
+@media (max-width: 400px) { /*  Mobily devices (tablets, 767px and up)  */
+    
+    section.landing .container .text {
+        line-height: 1.8;
+    }
+    
+    section.landing .container .text h2,
+    section.landing .container .text h3  {
+        font-weight: normal;
+    }
+    section.landing .container .text h2 span {
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+    
+
+}
+
+/* End landing */
+
+/* Start Services */
+.services .container .content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.services .container .content> section {
+    flex-basis: calc((90% / 3));
+    color: var(--main-color-blue);
+    box-shadow: 0 0 20px rgba(0 0 0 / 15%);
+    padding: 0px 20px 20px;
+    min-width: 300px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    height: 350px;
+    transition: var(--transition-action);
+    background-color: white;
+}
+
+.services .container .content> section:hover {
+    transform: scale(var(--scale-action));
+}
+
+.services .container .content> section i {
+    font-size: 5rem;
+}
+.services .container .content> section i ,
+.services .container .content> section h3 {
+    line-height: 2;
+}
+
+
+.services .container .content> section p {
+    line-height: 1.7;
+    color: black;
+}
+
+
+/* End Services */
+
+
+/* Start Projects */
+.projects {
+    background-color: rgb(50, 0, 97);
+    padding-bottom: 60px;
+}
+
+.projects .container .videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.projects .container .videos .video {
+    background-color: white;
+    border-radius: 10px;
+    border: white solid 1px;
+    overflow: hidden;
+    transition: var(--transition-action);
+}
+
+.projects .container .videos .video:hover {
+    transform: scale(var(--scale-action));
+}
+
+.projects .container .videos .video .text p {
+    padding: 18px;
+}
+
+.projects .container .videos .video .text div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 20px;
+}
+
+.projects .container .videos .video .text div span {
+    font-weight: bold;
+}
+
+.projects .container .videos .video .text div a {
+    text-decoration: none;
+    color: var(--main-color-blue);
+    font-weight: bold;
+}
+.projects .container .videos .video img {
+    max-width: 100%;
+}
+
+
+
+
+
+/* End Projects */
+
+
+/* Start Contact */
+
+.contact .container .content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.contact .container .content> section {
+    flex-basis: calc((90% / 3));
+    color: var(--main-color-blue);
+    box-shadow: 0 0 20px rgba(0 0 0 / 15%);
+    padding: 0px 20px 20px;
+    min-width: 300px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    height: 260px;
+    transition: var(--transition-action);
+    background-color: white;
+}
+
+.contact .container .content> section:hover {
+    transform: scale(var(--scale-action));
+}
+
+.contact .container .content> section i {
+    font-size: 5rem;
+}
+.contact .container .content> section i ,
+.contact .container .content> section h3 {
+    line-height: 2;
+}
+
+
+.contact .container .content> section p {
+    line-height: 1.7;
+    color: black;
+}
+
+/* End Contact */
+
+
+/* Start Footer */
+footer {
+    background-color: rgb(50, 0, 97);
+}
+
+footer .container {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .container p {
+    color: white;
+}
+
+footer .container p span {
+    font-weight: bold;
+    color: var(--main-color-blue);
+}
+
+
+footer .container .icons a {
+    color: white;
+    font-size: 20px;
+    padding-right: 11px;
+}
+
+
+
+@media (max-width: 767px) { /*  Mobily devices (tablets, 767px and up)  */
+    footer .container .icons a {
+        padding-right: 5px;
+    }
+ }
+
+
+/* End Footer */
